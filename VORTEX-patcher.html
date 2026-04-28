@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>GUST Patcher</title>
+<title>VORTEX Patcher</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Space+Grotesk:wght@400;500;600;700&display=swap"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
@@ -49,7 +49,7 @@ button,input,select,textarea{font:inherit}
 .brand-sub{font-size:22px;font-weight:800;color:var(--ac);margin-left:2px;letter-spacing:3px;}
 .titlebar-actions{display:flex;align-items:center;gap:8px;margin-left:auto;}
 
-/* GUST animations (exact copy) */
+/* animations (exact copy) */
 @keyframes gust-icon{0%{opacity:0;transform:translateX(-44px);filter:blur(8px)}65%{opacity:1;transform:translateX(4px);filter:blur(0)}100%{opacity:1;transform:translateX(0)}}
 @keyframes gust-letter{0%{opacity:0;transform:translateX(-28px) skewX(-12deg);filter:blur(6px)}60%{opacity:1;transform:translateX(3px) skewX(2deg);filter:blur(0)}80%{transform:translateX(-1px) skewX(-.5deg)}100%{opacity:1;transform:translateX(0) skewX(0);filter:blur(0)}}
 @keyframes gust-sub{0%{opacity:0;transform:translateY(4px)}100%{opacity:1;transform:translateY(0)}}
@@ -271,7 +271,7 @@ button,input,select,textarea{font:inherit}
 
 <div class="loading-overlay" id="loadingOverlay">
   <div class="loading-spinner"></div>
-  <div class="loading-text">Fetching GUST source…</div>
+  <div class="loading-text">Fetching Vortex source…</div>
   <div class="loading-sub" id="loadingSub">Connecting…</div>
 </div>
 
@@ -284,9 +284,9 @@ button,input,select,textarea{font:inherit}
   <div style="display:flex;align-items:center;gap:5px;font-size:13px;font-weight:700;color:#ffffff;margin-left:-4px;white-space:nowrap;position:relative;top:3px;">Made with hope (don't ask) by <strong style="font-weight:700;">NullBit9</strong></div>
   <div class="titlebar-actions">
     <button class="btn-secondary" id="reloadSourceBtn"><i class="fas fa-rotate-right"></i> Refresh Source</button>
-    <button class="btn-secondary" id="pasteSourceBtn" title="Paste GUST source manually"><i class="fas fa-paste"></i> Paste Source</button>
-    <button class="btn-secondary" id="githubBtn" onclick="window.open('https://github.com/nautilus-os/GUST','_blank')" title="View GUST on GitHub" style="padding:0;width:36px;justify-content:center;"><i class="fab fa-github" style="font-size:17px;line-height:1"></i></button>
-    <button class="btn-primary" id="downloadBtn" disabled><i class="fas fa-download"></i> Download Patched GUST</button>
+    <button class="btn-secondary" id="pasteSourceBtn" title="Paste VORTEX source manually"><i class="fas fa-paste"></i> Paste Source</button>
+    <button class="btn-secondary" id="githubBtn" onclick="window.open('https://github.com/nullbit9/vortex','_blank')" title="View VORTEX on GitHub" style="padding:0;width:36px;justify-content:center;"><i class="fab fa-github" style="font-size:17px;line-height:1"></i></button>
+    <button class="btn-primary" id="downloadBtn" disabled><i class="fas fa-download"></i> Download Patched VORTEX</button>
   </div>
 </div>
 
@@ -335,33 +335,33 @@ button,input,select,textarea{font:inherit}
       </span>
       <span class="hp-brand-sub gust-sub-anim">Patcher</span>
     </div>
-    <div class="homepage-tagline">Customize your GUST build before you download it.</div>
+    <div class="homepage-tagline">Customize your Vortex build before you download it.</div>
   </div>
   <div class="homepage-presets" id="homepagePresets">
 
-    <!-- Card 1: Base GUST -->
+    <!-- Card 1: Base VORTEX -->
     <div class="preset-card">
       <div class="preset-card-head">
         <div class="preset-card-icon blue"><i class="fab fa-github"></i></div>
         <div style="flex:1;min-width:0;">
-          <div style="display:flex;align-items:center;gap:7px;flex-wrap:wrap;"><span class="preset-card-title">Base GUST</span><span class="recommended-badge"><i class="fas fa-star" style="font-size:8px;"></i> Recommended</span></div>
+          <div style="display:flex;align-items:center;gap:7px;flex-wrap:wrap;"><span class="preset-card-title">Base VORTEX</span><span class="recommended-badge"><i class="fas fa-star" style="font-size:8px;"></i> Recommended</span></div>
           <div class="preset-card-subtitle">Straight from GitHub</div>
         </div>
       </div>
       <div class="preset-card-body">
-        <div class="preset-card-desc">Download the latest unmodified GUST source directly from the official GitHub repository with no custom patches applied. The most stable version of GUST, and the team at Nautilus Labs's recommended build.</div>
+        <div class="preset-card-desc">Download the latest unmodified VORTEX source directly from the official GitHub repository with no custom patches applied. The most stable version of VORTEX, and the recommended build.</div>
       </div>
       <div class="preset-card-footer">
-        <button class="preset-dl-btn primary" id="presetBaseBtn" onclick="downloadBaseGUST()"><i class="fas fa-download"></i> Download Base GUST</button>
+        <button class="preset-dl-btn primary" id="presetBaseBtn" onclick="downloadBaseGUST()"><i class="fas fa-download"></i> Download Base VORTEX</button>
       </div>
     </div>
 
-    <!-- Card 2: GUST Lite Preset -->
+    <!-- Card 2: VORTEX Lite Preset -->
     <div class="preset-card">
       <div class="preset-card-head">
         <div class="preset-card-icon green"><i class="fas fa-feather"></i></div>
         <div>
-          <div class="preset-card-title">GUST Lite</div>
+          <div class="preset-card-title">VORTEX Lite</div>
           <div class="preset-card-subtitle">Trimmed-down build</div>
         </div>
       </div>
@@ -369,7 +369,7 @@ button,input,select,textarea{font:inherit}
         <div class="preset-card-desc">Removes thread controls, favicon proxying, WebRTC blocking, smart request headers, spellcheck, request &amp; page user-agent spoofing, dev console logs, dev inspector, metrics, and the language picker.</div>
       </div>
       <div class="preset-card-footer">
-        <button class="preset-dl-btn primary" id="presetStealthBtn" onclick="downloadPreset('stealth')" disabled><i class="fas fa-download"></i> Download GUST Lite</button>
+        <button class="preset-dl-btn primary" id="presetStealthBtn" onclick="downloadPreset('stealth')" disabled><i class="fas fa-download"></i> Download VORTEX Lite</button>
       </div>
     </div>
 
@@ -383,14 +383,14 @@ button,input,select,textarea{font:inherit}
     <div class="sidebar-master-bar-icon"><i class="fas fa-table-list"></i></div>
     <div class="sidebar-master-bar-info">
       <div class="sidebar-master-bar-label">Show Language in Settings Sidebar</div>
-      <div class="sidebar-master-bar-desc">Uncheck to remove the <strong>Language</strong> entry from GUST's Settings sidebar. The (non-functional) language picker panel will be hidden and its nav entry removed entirely.</div>
+      <div class="sidebar-master-bar-desc">Uncheck to remove the <strong>Language</strong> entry from VORTEX's Settings sidebar. The (non-functional) language picker panel will be hidden and its nav entry removed entirely.</div>
     </div>
     <div class="sidebar-master-check checked" data-patch="sidebar-nav-language" data-section="language" data-master-for="language" onclick="toggleSidebarMaster(this)"></div>
   </div>
   <div class="settings-card">
     <div class="settings-card-head"><i class="fas fa-language"></i> Language <span class="broken-tag">[BROKEN]</span></div>
     <div class="settings-card-body">
-      <div class="patch-row"><div class="patch-row-info"><div class="patch-row-label">Preferred language picker <span class="broken-tag">broken</span></div><div class="patch-row-desc">Removes the language selector from Settings. It is non-functional in base GUST — no behaviour change.</div></div><div class="patch-check checked" data-patch="language" data-section="language" onclick="togglePatch(this)"></div></div>
+      <div class="patch-row"><div class="patch-row-info"><div class="patch-row-label">Preferred language picker <span class="broken-tag">broken</span></div><div class="patch-row-desc">Removes the language selector from Settings. It is non-functional in base VORTEX — no behaviour change.</div></div><div class="patch-check checked" data-patch="language" data-section="language" onclick="togglePatch(this)"></div></div>
     </div>
   </div>
 </div>
@@ -402,7 +402,7 @@ button,input,select,textarea{font:inherit}
     <div class="sidebar-master-bar-icon"><i class="fas fa-table-list"></i></div>
     <div class="sidebar-master-bar-info">
       <div class="sidebar-master-bar-label">Show Connection in Settings Sidebar</div>
-      <div class="sidebar-master-bar-desc">Uncheck to remove the <strong>Connection</strong> entry from GUST's Settings sidebar. WISP URL, thread controls, WebRTC blocking, and smart headers will all be hidden from Settings and locked to their defaults.</div>
+      <div class="sidebar-master-bar-desc">Uncheck to remove the <strong>Connection</strong> entry from VORTEX's Settings sidebar. WISP URL, thread controls, WebRTC blocking, and smart headers will all be hidden from Settings and locked to their defaults.</div>
     </div>
     <div class="sidebar-master-check checked" data-patch="sidebar-nav-connection" data-section="connection" data-master-for="wisp-url threads webrtc-block media-headers" onclick="toggleSidebarMaster(this)"></div>
   </div>
@@ -439,14 +439,14 @@ button,input,select,textarea{font:inherit}
     <div class="sidebar-master-bar-icon"><i class="fas fa-table-list"></i></div>
     <div class="sidebar-master-bar-info">
       <div class="sidebar-master-bar-label">Show Fallback in Settings Sidebar</div>
-      <div class="sidebar-master-bar-desc">Uncheck to remove the <strong>Fallback</strong> entry from GUST's Settings sidebar. The fallback toggle, fallback WISP URL, retry policy, and error triggers will all be hidden from Settings.</div>
+      <div class="sidebar-master-bar-desc">Uncheck to remove the <strong>Fallback</strong> entry from VORTEX's Settings sidebar. The fallback toggle, fallback WISP URL, retry policy, and error triggers will all be hidden from Settings.</div>
     </div>
     <div class="sidebar-master-check checked" data-patch="sidebar-nav-fallback" data-section="fallback" data-master-for="fallback-enabled fallback-wisp fallback-retries fallback-triggers" onclick="toggleSidebarMaster(this)"></div>
   </div>
   <div class="settings-card">
     <div class="settings-card-head"><i class="fas fa-toggle-on"></i> Fallback Toggle</div>
     <div class="settings-card-body">
-      <div class="patch-row"><div class="patch-row-info"><div class="patch-row-label">Enable fallback WISP switch</div><div class="patch-row-desc"><strong>Uncheck to permanently disable</strong> the entire fallback system and remove its toggle from Settings. If the primary WISP fails, GUST will show an error immediately with no retry or fallback attempt.</div></div><div class="patch-check" data-patch="fallback-enabled" data-section="fallback" data-master-for="fallback-wisp fallback-retries fallback-triggers" onclick="togglePatch(this)"></div></div>
+      <div class="patch-row"><div class="patch-row-info"><div class="patch-row-label">Enable fallback WISP switch</div><div class="patch-row-desc"><strong>Uncheck to permanently disable</strong> the entire fallback system and remove its toggle from Settings. If the primary WISP fails, VORTEX will show an error immediately with no retry or fallback attempt.</div></div><div class="patch-check" data-patch="fallback-enabled" data-section="fallback" data-master-for="fallback-wisp fallback-retries fallback-triggers" onclick="togglePatch(this)"></div></div>
     </div>
   </div>
   <div class="settings-card" data-child-of="fallback-enabled">
@@ -476,7 +476,7 @@ button,input,select,textarea{font:inherit}
     <div class="sidebar-master-bar-icon"><i class="fas fa-table-list"></i></div>
     <div class="sidebar-master-bar-info">
       <div class="sidebar-master-bar-label">Show Search in Settings Sidebar</div>
-      <div class="sidebar-master-bar-desc">Uncheck to remove the <strong>Search</strong> entry from GUST's Settings sidebar. The search engine picker, spellcheck toggle, and favicon proxy option will all be hidden from Settings.</div>
+      <div class="sidebar-master-bar-desc">Uncheck to remove the <strong>Search</strong> entry from VORTEX's Settings sidebar. The search engine picker, spellcheck toggle, and favicon proxy option will all be hidden from Settings.</div>
     </div>
     <div class="sidebar-master-check checked" data-patch="sidebar-nav-search" data-section="search" data-master-for="search-engine spellcheck search-favicon" onclick="toggleSidebarMaster(this)"></div>
   </div>
@@ -489,7 +489,7 @@ button,input,select,textarea{font:inherit}
   <div class="settings-card">
     <div class="settings-card-head"><i class="fas fa-spell-check"></i> Spellcheck <span class="broken-tag">[BROKEN]</span></div>
     <div class="settings-card-body">
-      <div class="patch-row"><div class="patch-row-info"><div class="patch-row-label">Enable spellcheck <span class="broken-tag">broken</span></div><div class="patch-row-desc"><strong>Uncheck to remove</strong> the spellcheck toggle from Settings. It is non-functional in base GUST — unchecking has no behavioural effect.</div></div><div class="patch-check checked" data-patch="spellcheck" data-section="search" onclick="togglePatch(this)"></div></div>
+      <div class="patch-row"><div class="patch-row-info"><div class="patch-row-label">Enable spellcheck <span class="broken-tag">broken</span></div><div class="patch-row-desc"><strong>Uncheck to remove</strong> the spellcheck toggle from Settings. It is non-functional in base VORTEX — unchecking has no behavioural effect.</div></div><div class="patch-check checked" data-patch="spellcheck" data-section="search" onclick="togglePatch(this)"></div></div>
     </div>
   </div>
   <div class="settings-card">
@@ -507,7 +507,7 @@ button,input,select,textarea{font:inherit}
     <div class="sidebar-master-bar-icon"><i class="fas fa-table-list"></i></div>
     <div class="sidebar-master-bar-info">
       <div class="sidebar-master-bar-label">Show Privacy in Settings Sidebar</div>
-      <div class="sidebar-master-bar-desc">Uncheck to remove the <strong>Privacy</strong> entry from GUST's Settings sidebar. Ad blocking, user-agent spoofing, and custom filter rules will all be hidden from Settings.</div>
+      <div class="sidebar-master-bar-desc">Uncheck to remove the <strong>Privacy</strong> entry from VORTEX's Settings sidebar. Ad blocking, user-agent spoofing, and custom filter rules will all be hidden from Settings.</div>
     </div>
     <div class="sidebar-master-check checked" data-patch="sidebar-nav-privacy" data-section="privacy" data-master-for="adblock-toggle ua-request ua-page custom-filters" onclick="toggleSidebarMaster(this)"></div>
   </div>
@@ -539,7 +539,7 @@ button,input,select,textarea{font:inherit}
     <div class="sidebar-master-bar-icon"><i class="fas fa-table-list"></i></div>
     <div class="sidebar-master-bar-info">
       <div class="sidebar-master-bar-label">Show Cache in Settings Sidebar</div>
-      <div class="sidebar-master-bar-desc">Uncheck to remove the <strong>Cache</strong> entry from GUST's Settings sidebar. Tab caching and the Clear Cache / Reset Everything buttons will both be hidden from Settings.</div>
+      <div class="sidebar-master-bar-desc">Uncheck to remove the <strong>Cache</strong> entry from VORTEX's Settings sidebar. Tab caching and the Clear Cache / Reset Everything buttons will both be hidden from Settings.</div>
     </div>
     <div class="sidebar-master-check checked" data-patch="sidebar-nav-cache" data-section="cache" data-master-for="tab-cache clear-cache" onclick="toggleSidebarMaster(this)"></div>
   </div>
@@ -564,7 +564,7 @@ button,input,select,textarea{font:inherit}
     <div class="sidebar-master-bar-icon"><i class="fas fa-table-list"></i></div>
     <div class="sidebar-master-bar-info">
       <div class="sidebar-master-bar-label">Show Files &amp; Media in Settings Sidebar</div>
-      <div class="sidebar-master-bar-desc">Uncheck to remove the <strong>Files &amp; Media</strong> entry from GUST's Settings sidebar. Range requests, auto-download, and all inline viewer toggles (PDF, image, video, audio, text) will be hidden from Settings.</div>
+      <div class="sidebar-master-bar-desc">Uncheck to remove the <strong>Files &amp; Media</strong> entry from VORTEX's Settings sidebar. Range requests, auto-download, and all inline viewer toggles (PDF, image, video, audio, text) will be hidden from Settings.</div>
     </div>
     <div class="sidebar-master-check checked" data-patch="sidebar-nav-filesandmedia" data-section="filesandmedia" data-master-for="media-range media-download media-pdf media-img media-video media-audio media-text" onclick="toggleSidebarMaster(this)"></div>
   </div>
@@ -619,7 +619,7 @@ button,input,select,textarea{font:inherit}
     <div class="sidebar-master-bar-icon"><i class="fas fa-table-list"></i></div>
     <div class="sidebar-master-bar-info">
       <div class="sidebar-master-bar-label">Show Appearance in Settings Sidebar</div>
-      <div class="sidebar-master-bar-desc">Uncheck to remove the <strong>Appearance</strong> entry from GUST's Settings sidebar. Font size, panel width persistence, panel position, and fullscreen-on-launch will all be hidden from Settings.</div>
+      <div class="sidebar-master-bar-desc">Uncheck to remove the <strong>Appearance</strong> entry from VORTEX's Settings sidebar. Font size, panel width persistence, panel position, and fullscreen-on-launch will all be hidden from Settings.</div>
     </div>
     <div class="sidebar-master-check checked" data-patch="sidebar-nav-appearance" data-section="appearance" data-master-for="font-size panel-widths panels-left auto-fullscreen" onclick="toggleSidebarMaster(this)"></div>
   </div>
@@ -644,7 +644,7 @@ button,input,select,textarea{font:inherit}
   <div class="settings-card">
     <div class="settings-card-head"><i class="fas fa-expand"></i> Fullscreen on Launch</div>
     <div class="settings-card-body">
-      <div class="patch-row"><div class="patch-row-info"><div class="patch-row-label">Start in fullscreen</div><div class="patch-row-desc"><strong>Uncheck to disable</strong> auto-fullscreen on launch and remove its toggle from Settings. GUST will always open in a normal window.</div></div><div class="patch-check checked" data-patch="auto-fullscreen" data-section="appearance" onclick="togglePatch(this)"></div></div>
+      <div class="patch-row"><div class="patch-row-info"><div class="patch-row-label">Start in fullscreen</div><div class="patch-row-desc"><strong>Uncheck to disable</strong> auto-fullscreen on launch and remove its toggle from Settings. VORTEX will always open in a normal window.</div></div><div class="patch-check checked" data-patch="auto-fullscreen" data-section="appearance" onclick="togglePatch(this)"></div></div>
     </div>
   </div>
 </div>
@@ -656,7 +656,7 @@ button,input,select,textarea{font:inherit}
     <div class="sidebar-master-bar-icon"><i class="fas fa-table-list"></i></div>
     <div class="sidebar-master-bar-info">
       <div class="sidebar-master-bar-label">Show Home Screen in Settings Sidebar</div>
-      <div class="sidebar-master-bar-desc">Uncheck to remove the <strong>Home Screen</strong> entry from GUST's Settings sidebar. The bookmarks bar toggle, wallpaper controls, and clock options will all be hidden from Settings.</div>
+      <div class="sidebar-master-bar-desc">Uncheck to remove the <strong>Home Screen</strong> entry from VORTEX's Settings sidebar. The bookmarks bar toggle, wallpaper controls, and clock options will all be hidden from Settings.</div>
     </div>
     <div class="sidebar-master-check checked" data-patch="sidebar-nav-homescreen" data-section="homescreen" data-master-for="bookmarks-bar nt-wallpaper nt-clock nt-clock24" onclick="toggleSidebarMaster(this)"></div>
   </div>
@@ -688,7 +688,7 @@ button,input,select,textarea{font:inherit}
     <div class="sidebar-master-bar-icon"><i class="fas fa-table-list"></i></div>
     <div class="sidebar-master-bar-info">
       <div class="sidebar-master-bar-label">Show Shortcuts in Settings Sidebar</div>
-      <div class="sidebar-master-bar-desc">Uncheck to remove the <strong>Shortcuts</strong> entry from GUST's Settings sidebar. The keyboard shortcuts enable/disable toggle and the full key binding list will be hidden from Settings.</div>
+      <div class="sidebar-master-bar-desc">Uncheck to remove the <strong>Shortcuts</strong> entry from VORTEX's Settings sidebar. The keyboard shortcuts enable/disable toggle and the full key binding list will be hidden from Settings.</div>
     </div>
     <div class="sidebar-master-check checked" data-patch="sidebar-nav-shortcuts" data-section="shortcuts" data-master-for="shortcuts-panel" onclick="toggleSidebarMaster(this)"></div>
   </div>
@@ -707,7 +707,7 @@ button,input,select,textarea{font:inherit}
     <div class="sidebar-master-bar-icon"><i class="fas fa-table-list"></i></div>
     <div class="sidebar-master-bar-info">
       <div class="sidebar-master-bar-label">Show Tutorial in Settings Sidebar</div>
-      <div class="sidebar-master-bar-desc">Uncheck to remove the <strong>Tutorial</strong> entry from GUST's Settings sidebar. The tutorial overlay, auto-launch on first load, and the restart button in Settings will all be hidden.</div>
+      <div class="sidebar-master-bar-desc">Uncheck to remove the <strong>Tutorial</strong> entry from VORTEX's Settings sidebar. The tutorial overlay, auto-launch on first load, and the restart button in Settings will all be hidden.</div>
     </div>
     <div class="sidebar-master-check checked" data-patch="sidebar-nav-tutorial" data-section="core-tutorial" data-master-for="tutorial-include tutorial-auto tutorial-settings" onclick="toggleSidebarMaster(this)"></div>
   </div>
@@ -832,8 +832,8 @@ button,input,select,textarea{font:inherit}
 </div>
 <script>
 let sourceHTML = '', sourceLoaded = false;
-const RAW_URL = 'https://raw.githubusercontent.com/nautilus-os/GUST/refs/heads/main/index.html';
-const GH_URL  = 'https://github.com/nautilus-os/GUST/raw/refs/heads/main/index.html';
+const RAW_URL = 'https://raw.githubusercontent.com/NullBit9/Vortex/refs/heads/main/index.html';
+const GH_URL  = 'https://github.com/NullBit9/Vortex/raw/refs/heads/main/index.html';
 
 // Default checked state for all patches (all checked by default)
 function resetCheckboxesToDefault() {
