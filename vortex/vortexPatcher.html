@@ -50,21 +50,25 @@ button,input,select,textarea{font:inherit}
 .titlebar-actions{display:flex;align-items:center;gap:8px;margin-left:auto;}
 
 /* animations (exact copy) */
-@keyframes gust-icon{0%{opacity:0;transform:translateX(-44px);filter:blur(8px)}65%{opacity:1;transform:translateX(4px);filter:blur(0)}100%{opacity:1;transform:translateX(0)}}
-@keyframes gust-letter{0%{opacity:0;transform:translateX(-28px) skewX(-12deg);filter:blur(6px)}60%{opacity:1;transform:translateX(3px) skewX(2deg);filter:blur(0)}80%{transform:translateX(-1px) skewX(-.5deg)}100%{opacity:1;transform:translateX(0) skewX(0);filter:blur(0)}}
-@keyframes gust-sub{0%{opacity:0;transform:translateY(4px)}100%{opacity:1;transform:translateY(0)}}
-.gust-icon-anim{animation:gust-icon .7s cubic-bezier(.22,1,.36,1) both;animation-play-state:paused}
-.gust-letter-G{animation:gust-letter .65s cubic-bezier(.22,1,.36,1) .10s both;animation-play-state:paused}
-.gust-letter-U{animation:gust-letter .65s cubic-bezier(.22,1,.36,1) .20s both;animation-play-state:paused}
-.gust-letter-S{animation:gust-letter .65s cubic-bezier(.22,1,.36,1) .30s both;animation-play-state:paused}
-.gust-letter-T{animation:gust-letter .65s cubic-bezier(.22,1,.36,1) .40s both;animation-play-state:paused}
-.gust-sub-anim{animation:gust-sub .45s ease-out .65s both;animation-play-state:paused}
-.brand-anim-ready .gust-icon-anim,
-.brand-anim-ready .gust-letter-G,
-.brand-anim-ready .gust-letter-U,
-.brand-anim-ready .gust-letter-S,
-.brand-anim-ready .gust-letter-T,
-.brand-anim-ready .gust-sub-anim{animation-play-state:running}
+@keyframes VORTEX-icon{0%{opacity:0;transform:translateX(-44px);filter:blur(8px)}65%{opacity:1;transform:translateX(4px);filter:blur(0)}100%{opacity:1;transform:translateX(0)}}
+@keyframes VORTEX-letter{0%{opacity:0;transform:translateX(-28px) skewX(-12deg);filter:blur(6px)}60%{opacity:1;transform:translateX(3px) skewX(2deg);filter:blur(0)}80%{transform:translateX(-1px) skewX(-.5deg)}100%{opacity:1;transform:translateX(0) skewX(0);filter:blur(0)}}
+@keyframes VORTEX-sub{0%{opacity:0;transform:translateY(4px)}100%{opacity:1;transform:translateY(0)}}
+.VORTEX-icon-anim{animation:VORTEX-icon .7s cubic-bezier(.22,1,.36,1) both;animation-play-state:paused}
+.VORTEX-letter-V{animation:VORTEX-letter .65s cubic-bezier(.22,1,.36,1) .10s both;animation-play-state:paused}
+.VORTEX-letter-O{animation:VORTEX-letter .65s cubic-bezier(.22,1,.36,1) .20s both;animation-play-state:paused}
+.VORTEX-letter-R{animation:VORTEX-letter .65s cubic-bezier(.22,1,.36,1) .30s both;animation-play-state:paused}
+.VORTEX-letter-T{animation:VORTEX-letter .65s cubic-bezier(.22,1,.36,1) .40s both;animation-play-state:paused}
+.VORTEX-letter-E{animation:VORTEX-letter .65s cubic-bezier(.22,1,.36,1) .50s both;animation-play-state:paused}
+.VORTEX-letter-X{animation:VORTEX-letter .65s cubic-bezier(.22,1,.36,1) .60s both;animation-play-state:paused}
+.VORTEX-sub-anim{animation:VORTEX-sub .45s ease-out .65s both;animation-play-state:paused}
+.brand-anim-ready .VORTEX-icon-anim,
+.brand-anim-ready .VORTEX-letter-V,
+.brand-anim-ready .VORTEX-letter-O,
+.brand-anim-ready .VORTEX-letter-R,
+.brand-anim-ready .VORTEX-letter-T,
+.brand-anim-ready .VORTEX-letter-E,
+.brand-anim-ready .VORTEX-letter-X{animation-play-state:running}
+.brand-anim-ready .VORTEX-sub-anim{animation-play-state:running}
 
 /* Buttons */
 .btn-primary{display:flex;align-items:center;gap:7px;padding:0 16px;height:36px;background:var(--ac);color:#0b1015;font-weight:700;font-size:13px;border:none;border-radius:8px;cursor:pointer;transition:opacity .15s,transform .1s}
@@ -77,7 +81,7 @@ button,input,select,textarea{font:inherit}
 /* Layout */
 .layout{flex:1;display:flex;overflow:hidden}
 
-/* Sidebar — 200px wide, matching GUST exactly */
+/* Sidebar — 200px wide, matching VORTEX exactly */
 .sidebar{width:200px;min-width:200px;height:100%;background:rgba(13,15,18,.7);border-right:1px solid var(--bd);display:flex;flex-direction:column;backdrop-filter:blur(8px);overflow:hidden;}
 .sidebar-scroll{flex:1;overflow-y:auto;overflow-x:hidden;padding:24px 0;}
 .sidebar-scroll::-webkit-scrollbar{width:3px}
@@ -85,7 +89,7 @@ button,input,select,textarea{font:inherit}
 .sidebar-scroll::-webkit-scrollbar-thumb{background:var(--bd);border-radius:3px}
 .sidebar nav{display:flex;flex-direction:column;gap:2px;padding:0 12px;}
 
-/* Nav items — GUST values: padding 9px 14px, radius 8px, size 13px, tx3 */
+/* Nav items — VORTEX values: padding 9px 14px, radius 8px, size 13px, tx3 */
 .settings-nav-item{display:flex;align-items:center;gap:10px;padding:9px 14px;border-radius:8px;border:none;background:transparent;color:var(--tx3);font-size:13px;font-weight:500;font-family:var(--ui);cursor:pointer;text-align:left;width:100%;transition:background .12s,color .12s}
 .settings-nav-item i{width:16px;text-align:center;font-size:13px;transition:color .12s}
 .settings-nav-item:hover{background:var(--surface);color:var(--tx2)}
@@ -94,46 +98,46 @@ button,input,select,textarea{font:inherit}
 .nav-label{flex:1}
 
 /* ── Sidebar icon micro-animations ── */
-@keyframes _gust-pulse   { 0%,100%{transform:scale(1)}  50%{transform:scale(1.22)} }
-@keyframes _gust-spin    { from{transform:rotate(0deg)} to{transform:rotate(360deg)} }
-@keyframes _gust-spinrev { from{transform:rotate(0deg)} to{transform:rotate(-360deg)} }
-@keyframes _gust-bob     { 0%,100%{transform:translateY(0)}  40%{transform:translateY(-4px)} 70%{transform:translateY(2px)} }
-@keyframes _gust-shake   { 0%,100%{transform:rotate(0)}  20%{transform:rotate(-12deg)} 50%{transform:rotate(12deg)} 75%{transform:rotate(-7deg)} }
-@keyframes _gust-ping    { 0%{transform:scale(1)} 40%{transform:scale(1.28)} 65%{transform:scale(.88)} 100%{transform:scale(1)} }
-@keyframes _gust-tilt    { 0%,100%{transform:rotate(0deg)} 30%{transform:rotate(-14deg)} 70%{transform:rotate(10deg)} }
-@keyframes _gust-pop     { 0%{transform:scale(1)} 35%{transform:scale(1.3)} 60%{transform:scale(.92)} 80%{transform:scale(1.08)} 100%{transform:scale(1)} }
-@keyframes _gust-beam    { 0%,100%{transform:scaleX(1) scaleY(1)} 40%{transform:scaleX(1.2) scaleY(.85)} 70%{transform:scaleX(.9) scaleY(1.1)} }
-@keyframes _gust-flick   { 0%,100%{transform:rotate(0) scale(1)} 25%{transform:rotate(-8deg) scale(1.15)} 60%{transform:rotate(6deg) scale(.95)} }
-@keyframes _gust-jolt    { 0%,100%{transform:translateX(0)} 20%{transform:translateX(-4px)} 50%{transform:translateX(5px)} 75%{transform:translateX(-2px)} }
-@keyframes _gust-stamp   { 0%{transform:scale(1) translateY(0)} 35%{transform:scale(.82) translateY(3px)} 65%{transform:scale(1.12) translateY(-2px)} 100%{transform:scale(1) translateY(0)} }
+@keyframes _VORTEX-pulse   { 0%,100%{transform:scale(1)}  50%{transform:scale(1.22)} }
+@keyframes _VORTEX-spin    { from{transform:rotate(0deg)} to{transform:rotate(360deg)} }
+@keyframes _VORTEX-spinrev { from{transform:rotate(0deg)} to{transform:rotate(-360deg)} }
+@keyframes _VORTEX-bob     { 0%,100%{transform:translateY(0)}  40%{transform:translateY(-4px)} 70%{transform:translateY(2px)} }
+@keyframes _VORTEX-shake   { 0%,100%{transform:rotate(0)}  20%{transform:rotate(-12deg)} 50%{transform:rotate(12deg)} 75%{transform:rotate(-7deg)} }
+@keyframes _VORTEX-ping    { 0%{transform:scale(1)} 40%{transform:scale(1.28)} 65%{transform:scale(.88)} 100%{transform:scale(1)} }
+@keyframes _VORTEX-tilt    { 0%,100%{transform:rotate(0deg)} 30%{transform:rotate(-14deg)} 70%{transform:rotate(10deg)} }
+@keyframes _VORTEX-pop     { 0%{transform:scale(1)} 35%{transform:scale(1.3)} 60%{transform:scale(.92)} 80%{transform:scale(1.08)} 100%{transform:scale(1)} }
+@keyframes _VORTEX-beam    { 0%,100%{transform:scaleX(1) scaleY(1)} 40%{transform:scaleX(1.2) scaleY(.85)} 70%{transform:scaleX(.9) scaleY(1.1)} }
+@keyframes _VORTEX-flick   { 0%,100%{transform:rotate(0) scale(1)} 25%{transform:rotate(-8deg) scale(1.15)} 60%{transform:rotate(6deg) scale(.95)} }
+@keyframes _VORTEX-jolt    { 0%,100%{transform:translateX(0)} 20%{transform:translateX(-4px)} 50%{transform:translateX(5px)} 75%{transform:translateX(-2px)} }
+@keyframes _VORTEX-stamp   { 0%{transform:scale(1) translateY(0)} 35%{transform:scale(.82) translateY(3px)} 65%{transform:scale(1.12) translateY(-2px)} 100%{transform:scale(1) translateY(0)} }
 /* Connection — wired: pulse like signal */
-.settings-nav-item[data-section="connection"]:hover i { animation: _gust-pulse .55s cubic-bezier(.34,1.56,.64,1) forwards; }
+.settings-nav-item[data-section="connection"]:hover i { animation: _VORTEX-pulse .55s cubic-bezier(.34,1.56,.64,1) forwards; }
 /* Search — magnifying glass: bob */
-.settings-nav-item[data-section="search"]:hover i { animation: _gust-bob .45s ease forwards; }
+.settings-nav-item[data-section="search"]:hover i { animation: _VORTEX-bob .45s ease forwards; }
 /* Privacy — shield: ping */
-.settings-nav-item[data-section="privacy"]:hover i { animation: _gust-ping .4s ease forwards; }
+.settings-nav-item[data-section="privacy"]:hover i { animation: _VORTEX-ping .4s ease forwards; }
 /* Cache — database: beam (squish like stacking) */
-.settings-nav-item[data-section="cache"]:hover i { animation: _gust-beam .45s ease forwards; }
+.settings-nav-item[data-section="cache"]:hover i { animation: _VORTEX-beam .45s ease forwards; }
 /* Files & Media — film: shake (film reel clatter) */
-.settings-nav-item[data-section="filesandmedia"]:hover i { animation: _gust-shake .45s ease forwards; }
+.settings-nav-item[data-section="filesandmedia"]:hover i { animation: _VORTEX-shake .45s ease forwards; }
 /* Appearance — palette: spin */
-.settings-nav-item[data-section="appearance"]:hover i { animation: _gust-spin .5s cubic-bezier(.34,1.56,.64,1) forwards; }
+.settings-nav-item[data-section="appearance"]:hover i { animation: _VORTEX-spin .5s cubic-bezier(.34,1.56,.64,1) forwards; }
 /* Home Screen — house: bob */
-.settings-nav-item[data-section="homescreen"]:hover i { animation: _gust-bob .42s ease forwards; }
+.settings-nav-item[data-section="homescreen"]:hover i { animation: _VORTEX-bob .42s ease forwards; }
 /* Shortcuts — keyboard: tilt (like pressing a key) */
-.settings-nav-item[data-section="shortcuts"]:hover i { animation: _gust-tilt .4s ease forwards; }
+.settings-nav-item[data-section="shortcuts"]:hover i { animation: _VORTEX-tilt .4s ease forwards; }
 /* Tutorial (Core) — map: pop */
-.settings-nav-item[data-section="core-tutorial"]:hover i { animation: _gust-pop .45s ease forwards; }
+.settings-nav-item[data-section="core-tutorial"]:hover i { animation: _VORTEX-pop .45s ease forwards; }
 /* Language — globe: spin reverse */
-.settings-nav-item[data-section="language"]:hover i { animation: _gust-spinrev .5s cubic-bezier(.34,1.56,.64,1) forwards; }
+.settings-nav-item[data-section="language"]:hover i { animation: _VORTEX-spinrev .5s cubic-bezier(.34,1.56,.64,1) forwards; }
 /* Tab System — window-restore: flick (like flipping a tab) */
-.settings-nav-item[data-section="core-tabs"]:hover i { animation: _gust-flick .4s ease forwards; }
+.settings-nav-item[data-section="core-tabs"]:hover i { animation: _VORTEX-flick .4s ease forwards; }
 /* Ad Blocker (Core) — shield: ping */
-.settings-nav-item[data-section="core-adblock"]:hover i { animation: _gust-ping .4s ease forwards; }
+.settings-nav-item[data-section="core-adblock"]:hover i { animation: _VORTEX-ping .4s ease forwards; }
 /* Dev Tools — server: jolt (like a server rack vibrating) */
-.settings-nav-item[data-section="core-devtools"]:hover i { animation: _gust-jolt .4s ease forwards; }
+.settings-nav-item[data-section="core-devtools"]:hover i { animation: _VORTEX-jolt .4s ease forwards; }
 /* Metrics — chart: stamp (bars pressing down) */
-.settings-nav-item[data-section="core-metrics"]:hover i { animation: _gust-stamp .45s ease forwards; }
+.settings-nav-item[data-section="core-metrics"]:hover i { animation: _VORTEX-stamp .45s ease forwards; }
 /* Fallback — rotate-left: simple spin like reload button */
 .settings-nav-item[data-section="fallback"]:hover i { transform: rotate(-180deg); transition: transform .35s cubic-bezier(.34,1.56,.64,1); }
 
@@ -144,27 +148,27 @@ button,input,select,textarea{font:inherit}
 .sidebar-divider{border:none;border-top:1px solid var(--bd);margin:4px 4px;flex-shrink:0}
 .sidebar-core-label{font-size:10px;font-weight:700;letter-spacing:.1em;color:var(--tx3);text-transform:uppercase;padding:8px 14px 4px;flex-shrink:0}
 
-/* Main — GUST: padding 40px 48px, gap 32px */
+/* Main — VORTEX: padding 40px 48px, gap 32px */
 .main{flex:1;overflow-y:auto;padding:40px 48px;display:flex;flex-direction:column;gap:32px;background:var(--main-bg)}
 .main::-webkit-scrollbar{width:5px}
 .main::-webkit-scrollbar-track{background:transparent}
 .main::-webkit-scrollbar-thumb{background:var(--bd);border-radius:3px}
 
-/* Settings sections — GUST: display none, flex-col, gap 16px */
+/* Settings sections — VORTEX: display none, flex-col, gap 16px */
 .settings-section{display:none;flex-direction:column;gap:16px}
 .settings-section.active{display:flex}
 
-/* Settings card — GUST: bg2, bd, radius 12px */
+/* Settings card — VORTEX: bg2, bd, radius 12px */
 .settings-card{background:var(--bg2);border:1px solid var(--bd);border-radius:12px;overflow:hidden}
-/* Card head — GUST: padding 13px 18px, size 13px, weight 600, color tx, bg bg1 */
+/* Card head — VORTEX: padding 13px 18px, size 13px, weight 600, color tx, bg bg1 */
 .settings-card-head{padding:13px 18px;font-size:13px;font-weight:600;color:var(--tx);background:var(--bg1);border-bottom:1px solid var(--bd);display:flex;align-items:center;gap:8px}
 .settings-card-head i{color:var(--ac)}
-/* Card body — GUST: padding 18px */
+/* Card body — VORTEX: padding 18px */
 .settings-card-body{padding:18px}
 
-/* GUST hint — 11px, tx3 */
+/* VORTEX hint — 11px, tx3 */
 .settings-hint{font-size:11px;color:var(--tx3);margin-top:6px;line-height:1.5}
-/* GUST label — uppercase, 12px, tx3 */
+/* VORTEX label — uppercase, 12px, tx3 */
 .settings-label{font-size:12px;color:var(--tx3);margin-bottom:8px;display:block;text-transform:uppercase}
 
 /* Patch rows */
@@ -175,7 +179,7 @@ button,input,select,textarea{font:inherit}
 .patch-row-desc{font-size:11px;color:var(--tx3);line-height:1.5}
 .broken-tag{font-size:10px;font-weight:700;color:#ff4444;margin-left:4px}
 
-/* Checkbox — styled to match GUST's switch on/off feel */
+/* Checkbox — styled to match VORTEX's switch on/off feel */
 .patch-check{width:22px;height:22px;border-radius:6px;border:2px solid var(--bd);background:var(--bg3);cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;transition:border-color .15s,background .15s}
 .patch-check.checked{border-color:var(--ac);background:rgba(157,229,255,.15)}
 .patch-check.checked::after{content:'\f00c';font-family:'Font Awesome 6 Free';font-weight:900;font-size:11px;color:var(--ac)}
@@ -277,16 +281,16 @@ button,input,select,textarea{font:inherit}
 
 <div class="titlebar">
   <div class="brand">
-    <i class="fas fa-wind gust-icon-anim" style="font-size:18px"></i>
-    <span class="brand-letters"><span class="gust-letter-G">G</span><span class="gust-letter-U">U</span><span class="gust-letter-S">S</span><span class="gust-letter-T">T</span></span>
-    <span class="brand-sub gust-sub-anim">Patcher</span>
+    <i class="fas fa-wind VORTEX-icon-anim" style="font-size:18px"></i>
+    <span class="brand-letters"><span class="VORTEX-letter-V">V</span><span class="VORTEX-letter-O">O</span><span class="VORTEX-letter-R">R</span><span class="VORTEX-letter-T">T</span><span class="VORTEX-letter-E">E</span><span class="VORTEX-letter-X">X</span></span>
+    <span class="brand-sub VORTEX-sub-anim">Patcher</span>
   </div>
-  <div style="display:flex;align-items:center;gap:5px;font-size:13px;font-weight:700;color:#ffffff;margin-left:-4px;white-space:nowrap;position:relative;top:3px;">Made with hope (don't ask) by <strong style="font-weight:700;">NullBit9</strong></div>
+  <div style="display:flex;align-items:center;gap:5px;font-size:13px;font-weight:700;color:#ffffff;margin-left:-4px;white-space:nowrap;position:relative;top:3px;"><strong style="font-weight:700;">NullBit9</strong></div>
   <div class="titlebar-actions">
     <button class="btn-secondary" id="reloadSourceBtn"><i class="fas fa-rotate-right"></i> Refresh Source</button>
     <button class="btn-secondary" id="pasteSourceBtn" title="Paste VORTEX source manually"><i class="fas fa-paste"></i> Paste Source</button>
     <button class="btn-secondary" id="githubBtn" onclick="window.open('https://github.com/nullbit9/vortex','_blank')" title="View VORTEX on GitHub" style="padding:0;width:36px;justify-content:center;"><i class="fab fa-github" style="font-size:17px;line-height:1"></i></button>
-    <button class="btn-primary" id="downloadBtn" disabled><i class="fas fa-download"></i> Download Patched VORTEX</button>
+    <button class="btn-primary" id="downloadBtn" disabled><i class="fas fa-download"></i> Download Patched Vortex</button>
   </div>
 </div>
 
@@ -329,11 +333,11 @@ button,input,select,textarea{font:inherit}
 <div class="homepage-section active" data-section="homepage">
   <div class="homepage-hero">
     <div class="homepage-brand-wrap">
-      <i class="fas fa-wind hp-icon gust-icon-anim" id="hp-wind-icon"></i>
+      <i class="fas fa-wind hp-icon VORTEX-icon-anim" id="hp-wind-icon"></i>
       <span class="hp-brand-letters">
-        <span class="gust-letter-G">G</span><span class="gust-letter-U">U</span><span class="gust-letter-S">S</span><span class="gust-letter-T">T</span>
+        <span class="VORTEX-letter-V">V</span><span class="VORTEX-letter-O">O</span><span class="VORTEX-letter-R">R</span><span class="VORTEX-letter-T">T</span><span class="VORTEX-letter-E">E</span><span class="VORTEX-letter-X">X</span>
       </span>
-      <span class="hp-brand-sub gust-sub-anim">Patcher</span>
+      <span class="hp-brand-sub VORTEX-sub-anim">Patcher</span>
     </div>
     <div class="homepage-tagline">Customize your Vortex build before you download it.</div>
   </div>
@@ -352,7 +356,7 @@ button,input,select,textarea{font:inherit}
         <div class="preset-card-desc">Download the latest unmodified VORTEX source directly from the official GitHub repository with no custom patches applied. The most stable version of VORTEX, and the recommended build.</div>
       </div>
       <div class="preset-card-footer">
-        <button class="preset-dl-btn primary" id="presetBaseBtn" onclick="downloadBaseGUST()"><i class="fas fa-download"></i> Download Base VORTEX</button>
+        <button class="preset-dl-btn primary" id="presetBaseBtn" onclick="downloadBaseVORTEX()"><i class="fas fa-download"></i> Download Base VORTEX</button>
       </div>
     </div>
 
@@ -853,7 +857,7 @@ function resetCheckboxesToDefault() {
 function playBrandAnimation() {
   const brand = document.querySelector('.brand');
   brand.classList.remove('brand-anim-ready');
-  const animated = brand.querySelectorAll('.gust-icon-anim, .gust-letter-G, .gust-letter-U, .gust-letter-S, .gust-letter-T, .gust-sub-anim');
+  const animated = brand.querySelectorAll('.VORTEX-icon-anim, .VORTEX-letter-V, .VORTEX-letter-O, .VORTEX-letter-R, .VORTEX-letter-T, .VORTEX-letter-E, .VORTEX-letter-X, .VORTEX-sub-anim');
   animated.forEach(el => { el.style.animation = 'none'; el.style.opacity = '0'; });
   void brand.offsetWidth;
   animated.forEach(el => { el.style.animation = ''; el.style.opacity = ''; });
@@ -864,7 +868,7 @@ function playBrandAnimation() {
   const hpWrap = document.querySelector('.homepage-brand-wrap');
   if (hpWrap) {
     hpWrap.classList.remove('brand-anim-ready');
-    const hpAnimated = hpWrap.querySelectorAll('.gust-icon-anim, .gust-letter-G, .gust-letter-U, .gust-letter-S, .gust-letter-T, .gust-sub-anim');
+    const hpAnimated = hpWrap.querySelectorAll('.VORTEX-icon-anim, .VORTEX-letter-V, .VORTEX-letter-O, .VORTEX-letter-R, .VORTEX-letter-T, .VORTEX-letter-E, .VORTEX-letter-X, .VORTEX-sub-anim');
     hpAnimated.forEach(el => { el.style.animation = 'none'; el.style.opacity = '0'; });
     void hpWrap.offsetWidth;
     hpAnimated.forEach(el => { el.style.animation = ''; el.style.opacity = ''; });
@@ -1031,11 +1035,11 @@ document.querySelectorAll('.settings-nav-item').forEach(btn => {
   });
 });
 
-function looksLikeGUST(t) {
+function looksLikeVORTEX(t) {
   if (typeof t !== 'string' || t.length < 50000) return false;
   if (!t.toLowerCase().includes('<!doctype html')) return false;
-  // Must contain GUST-specific identifiers (present in the real source)
-  return t.includes('GUST Browser') || t.includes('gust:') || t.includes('wisp.mercurywork');
+  // Must contain VORTEX-specific identifiers (present in the real source)
+  return t.includes('VORTEX Browser') || t.includes('VORTEX:') || t.includes('wisp.mercurywork');
 }
 async function fetchWithTimeout(url, ms, opts={}) {
   const c = new AbortController();
@@ -1048,7 +1052,7 @@ async function attemptFetch(url, label, opts={}) {
   const res = await fetchWithTimeout(url, 15000, opts);
   if (!res.ok) throw new Error('HTTP ' + res.status);
   const text = await res.text();
-  if (!looksLikeGUST(text)) throw new Error('Response (' + text.length + 'B) not valid GUST source');
+  if (!looksLikeVORTEX(text)) throw new Error('Response (' + text.length + 'B) not valid VORTEX source');
   return text;
 }
 let _firstLoad = true;
@@ -1065,7 +1069,7 @@ async function fetchSource() {
   // then CORS proxies that return raw content not the GitHub HTML page
   const attempts = [
     {label:'Fetching from GitHub Raw...',       url: RAW_URL,  opts: {headers:{'Accept':'text/html,application/xhtml+xml'}}},
-    {label:'Fetching via jsDelivr CDN...',       url: 'https://cdn.jsdelivr.net/gh/nautilus-os/GUST@main/index.html', opts:{}},
+    {label:'Fetching via jsDelivr CDN...',       url: 'https://cdn.jsdelivr.net/gh/nautilus-os/gust@main/index.html', opts:{}},
     {label:'Fetching via codetabs proxy...',     url: 'https://api.codetabs.com/v1/proxy/?quest=' + RAW_URL, opts:{}},
     {label:'Fetching via allorigins...',         url: 'https://api.allorigins.win/raw?url=' + encodeURIComponent(RAW_URL), opts:{}},
   ];
@@ -1081,7 +1085,7 @@ async function fetchSource() {
       updatePresetButtons();
       if (_firstLoad) { _firstLoad = false; setTimeout(() => startPatcherTutorial(), 600); }
       return;
-    } catch(err) { console.warn('[GUST Patcher] ' + a.label + ' failed:', err.message); }
+    } catch(err) { console.warn('[VORTEX Patcher] ' + a.label + ' failed:', err.message); }
   }
   ov.style.display = 'none';
   playBrandAnimation();
@@ -1093,11 +1097,11 @@ async function fetchSource() {
     box.id = 'fetchErrorBox';
     box.innerHTML = `
       <i class="fas fa-triangle-exclamation"></i>
-      <h3>Could not load GUST source</h3>
+      <h3>Could not load VORTEX source</h3>
       <p>All fetch attempts failed (likely a network/CORS restriction).<br>
       Open DevTools (F12) → Console for details, then hit <strong style="color:var(--tx2)">Refresh Source</strong>.<br><br>
-      <strong style="color:var(--tx2)">Or paste the GUST source manually below:</strong></p>
-      <textarea id="manualSourceInput" placeholder="Paste the full GUST HTML here (download from github.com/nautilus-os/GUST)…"
+      <strong style="color:var(--tx2)">Or paste the VORTEX source manually below:</strong></p>
+      <textarea id="manualSourceInput" placeholder="Paste the full VORTEX HTML here (download from github.com/nullbit9/aerobrowser)…"
         style="width:100%;height:120px;background:var(--bg3);border:1px solid var(--bd);border-radius:8px;padding:10px;
                color:var(--tx2);font-family:var(--mono);font-size:12px;resize:vertical;outline:none;margin-top:4px;"></textarea>
       <button id="manualSourceBtn" class="btn-primary" style="margin-top:2px;">
@@ -1107,8 +1111,8 @@ async function fetchSource() {
 
     document.getElementById('manualSourceBtn').addEventListener('click', () => {
       const val = document.getElementById('manualSourceInput').value.trim();
-      if (!looksLikeGUST(val)) {
-        setStatus('err', 'Pasted content does not look like valid GUST source — check you copied the full file.');
+      if (!looksLikeVORTEX(val)) {
+        setStatus('err', 'Pasted content does not look like valid VORTEX source — check you copied the full file.');
         return;
       }
       sourceHTML = val; sourceLoaded = true;
@@ -1131,7 +1135,7 @@ function setStatus(type, text) {
 document.getElementById('downloadBtn').addEventListener('click', () => { if (sourceLoaded) buildAndDownload(); });
 document.getElementById('reloadSourceBtn').addEventListener('click', fetchSource);
 
-// Paste Source button — opens a modal for manually pasting GUST HTML
+// Paste Source button — opens a modal for manually pasting VORTEX HTML
 document.getElementById('pasteSourceBtn').addEventListener('click', () => {
   // Remove existing modal if any
   const existing = document.getElementById('pasteModal');
@@ -1142,14 +1146,14 @@ document.getElementById('pasteSourceBtn').addEventListener('click', () => {
   modal.innerHTML = `
     <div style="background:var(--bg2);border:1px solid var(--bd);border-radius:16px;padding:24px;width:520px;max-width:94vw;display:flex;flex-direction:column;gap:14px;box-shadow:0 16px 48px rgba(0,0,0,.7);">
       <div style="display:flex;align-items:center;justify-content:space-between;">
-        <span style="font-size:15px;font-weight:700;color:var(--tx)"><i class="fas fa-paste" style="color:var(--ac);margin-right:8px;"></i>Paste GUST Source</span>
+        <span style="font-size:15px;font-weight:700;color:var(--tx)"><i class="fas fa-paste" style="color:var(--ac);margin-right:8px;"></i>Paste VORTEX Source</span>
       </div>
       <p style="font-size:12px;color:var(--tx3);line-height:1.6;">
         Download <code style="background:var(--bg3);padding:1px 5px;border-radius:4px;">index.html</code> from
-        <a href="https://github.com/nautilus-os/GUST" target="_blank" style="color:var(--ac)">github.com/nautilus-os/GUST</a>
+        <a href="https://github.com/nullbit9/aerobrowser" target="_blank" style="color:var(--ac)">github.com/nullbit9/aerobrowser</a>
         then paste the full file contents below.
       </p>
-      <textarea id="pasteModalInput" placeholder="Paste the full GUST HTML here…"
+      <textarea id="pasteModalInput" placeholder="Paste the full VORTEX HTML here…"
         style="width:100%;height:160px;background:var(--bg3);border:1px solid var(--bd);border-radius:8px;
                padding:10px;color:var(--tx2);font-family:var(--mono);font-size:12px;resize:vertical;outline:none;"></textarea>
       <div style="display:flex;gap:8px;justify-content:flex-end;align-items:center;">
@@ -1162,8 +1166,8 @@ document.getElementById('pasteSourceBtn').addEventListener('click', () => {
   document.getElementById('pasteModalCancel').onclick = () => modal.remove();
   document.getElementById('pasteModalLoad').onclick = () => {
     const val = document.getElementById('pasteModalInput').value.trim();
-    if (!looksLikeGUST(val)) {
-      document.getElementById('pasteModalStatus').textContent = 'This does not look like valid GUST source — make sure you copied the complete index.html file.';
+    if (!looksLikeVORTEX(val)) {
+      document.getElementById('pasteModalStatus').textContent = 'This does not look like valid VORTEX source — make sure you copied the complete index.html file.';
       return;
     }
     sourceHTML = val; sourceLoaded = true;
@@ -1183,7 +1187,7 @@ function getPatch(id) {
   return el ? el.classList.contains('checked') : true;
 }
 
-// STRATEGY: Never cut HTML/CSS/JS out of GUST source - that breaks it.
+// STRATEGY: Never cut HTML/CSS/JS out of VORTEX source - that breaks it.
 // Inject a small script before </head> that pre-seeds localStorage,
 // hides elements with CSS, and stubs JS functions after load.
 // The payload is base64-encoded so no special chars can break the HTML.
@@ -1231,7 +1235,7 @@ function buildPatchScript(removedPatches) {
     js('})();');
   }
 
-  // ---- Sidebar nav hide rules (hides the nav item in GUST Browser Settings) ----
+  // ---- Sidebar nav hide rules (hides the nav item in VORTEX Browser Settings) ----
   if (rm.has('sidebar-nav-connection'))    css('.settings-nav-item[data-section=\"connection\"]');
   if (rm.has('sidebar-nav-fallback'))      css('.settings-nav-item[data-section=\"fallback\"]');
   if (rm.has('sidebar-nav-search'))        css('.settings-nav-item[data-section=\"search\"]');
@@ -1244,36 +1248,36 @@ function buildPatchScript(removedPatches) {
   if (rm.has('sidebar-nav-language'))      css('.settings-nav-item[data-section=\"language\"]');
   if (rm.has('sidebar-nav-tutorial'))      css('.settings-nav-item[data-section=\"tutorial\"]');
 
-  // ---- localStorage pre-seeds (keys verified against GUST source) ----
-  if (rm.has('search-favicon'))  { ls('gust:favicon-proxy:v1','0'); }
-  if (rm.has('webrtc-block'))    { ls('gust:webrtc:block:v1','0'); }
-  if (rm.has('media-headers'))   { ls('gust:media:headers:v1','0'); }
-  if (rm.has('adblock-toggle'))  { ls('gust:block:v1','false'); }
-  if (rm.has('tab-cache'))       { ls('gust:tabcache:v1','false'); }
-  if (rm.has('media-range'))     { ls('gust:media:range:v1','0'); }
-  if (rm.has('media-download'))  { ls('gust:media:download:v1','0'); }
-  if (rm.has('media-pdf'))       { ls('gust:media:pdf:v1','0'); }
-  if (rm.has('media-img'))       { ls('gust:media:img:v1','0'); }
-  if (rm.has('media-video'))     { ls('gust:media:video:v1','0'); }
-  if (rm.has('media-audio'))     { ls('gust:media:audio:v1','0'); }
-  if (rm.has('media-text'))      { ls('gust:media:text:v1','0'); }
-  if (rm.has('panel-widths'))    { ls('gust:panelwidthpersist:v1','false'); }
-  if (rm.has('panels-left'))     { ls('gust:panelsleft','0'); }
-  if (rm.has('auto-fullscreen')) { ls('gust:autoFullscreen','0'); }
-  if (rm.has('bookmarks-bar'))   { ls('gust:bookmarksbar:v1','false'); }
-  if (rm.has('nt-clock'))        { ls('gust:showclock:v1','false'); }
-  if (rm.has('nt-clock24'))      { ls('gust:24hrclock:v1','false'); }
-  if (rm.has('shortcuts-panel')) { ls('gust:shortcutsEnabled','0'); }
+  // ---- localStorage pre-seeds (keys verified against VORTEX source) ----
+  if (rm.has('search-favicon'))  { ls('VORTEX:favicon-proxy:v1','0'); }
+  if (rm.has('webrtc-block'))    { ls('VORTEX:webrtc:block:v1','0'); }
+  if (rm.has('media-headers'))   { ls('VORTEX:media:headers:v1','0'); }
+  if (rm.has('adblock-toggle'))  { ls('VORTEX:block:v1','false'); }
+  if (rm.has('tab-cache'))       { ls('VORTEX:tabcache:v1','false'); }
+  if (rm.has('media-range'))     { ls('VORTEX:media:range:v1','0'); }
+  if (rm.has('media-download'))  { ls('VORTEX:media:download:v1','0'); }
+  if (rm.has('media-pdf'))       { ls('VORTEX:media:pdf:v1','0'); }
+  if (rm.has('media-img'))       { ls('VORTEX:media:img:v1','0'); }
+  if (rm.has('media-video'))     { ls('VORTEX:media:video:v1','0'); }
+  if (rm.has('media-audio'))     { ls('VORTEX:media:audio:v1','0'); }
+  if (rm.has('media-text'))      { ls('VORTEX:media:text:v1','0'); }
+  if (rm.has('panel-widths'))    { ls('VORTEX:panelwidthpersist:v1','false'); }
+  if (rm.has('panels-left'))     { ls('VORTEX:panelsleft','0'); }
+  if (rm.has('auto-fullscreen')) { ls('VORTEX:autoFullscreen','0'); }
+  if (rm.has('bookmarks-bar'))   { ls('VORTEX:bookmarksbar:v1','false'); }
+  if (rm.has('nt-clock'))        { ls('VORTEX:showclock:v1','false'); }
+  if (rm.has('nt-clock24'))      { ls('VORTEX:24hrclock:v1','false'); }
+  if (rm.has('shortcuts-panel')) { ls('VORTEX:shortcutsEnabled','0'); }
   if (rm.has('tutorial-auto') || rm.has('tutorial-include')) {
     // All known tutorial-done key variants
-    ls('gust:tutorial','done'); ls('gust:tutorial:done','1');
+    ls('VORTEX:tutorial','done'); ls('VORTEX:tutorial:done','1');
   }
-  if (rm.has('fallback-enabled'))  { ls('gust:fallback:enabled','0'); }
-  if (rm.has('fallback-5xx'))      { ls('gust:fallback:5xx','0'); }
-  if (rm.has('fallback-timeout'))  { ls('gust:fallback:timeout','0'); }
-  if (rm.has('fallback-dns'))      { ls('gust:fallback:dns','0'); }
+  if (rm.has('fallback-enabled'))  { ls('VORTEX:fallback:enabled','0'); }
+  if (rm.has('fallback-5xx'))      { ls('VORTEX:fallback:5xx','0'); }
+  if (rm.has('fallback-timeout'))  { ls('VORTEX:fallback:timeout','0'); }
+  if (rm.has('fallback-dns'))      { ls('VORTEX:fallback:dns','0'); }
 
-  // ---- CSS hide rules (selectors verified against GUST source) ----
+  // ---- CSS hide rules (selectors verified against VORTEX source) ----
   // Each rule hides the settings UI element when that patch is removed.
   // NOTE: these only hide the settings option — the feature itself is
   // disabled via the localStorage pre-seeds above.
@@ -1436,7 +1440,7 @@ function buildPatchScript(removedPatches) {
     // The drag handler is an IIFE — there's no global to stub.
     // Instead we inject a capture-phase pointerdown listener that
     // intercepts any pointerdown on a .tab element and stops it
-    // from propagating to GUST's drag handler, while still allowing
+    // from propagating to VORTEX's drag handler, while still allowing
     // normal click/close events (which use click/pointerup, not pointerdown).
     js('(function(){');
     js('  document.addEventListener("pointerdown", function(e){');
@@ -1444,7 +1448,7 @@ function buildPatchScript(removedPatches) {
     js('    var tab=e.target.closest(".tab[data-tab-id]");');
     js('    if(!tab) return;');
     js('    if(e.target.closest(".tab-close")) return;');
-    js('    // Stop GUST\'s drag listener from firing; click still works');
+    js('    // Stop VORTEX\'s drag listener from firing; click still works');
     js('    e.stopImmediatePropagation();');
     js('    // Re-fire a plain click so tab switching still works');
     js('    tab.dispatchEvent(new MouseEvent("click",{bubbles:true,cancelable:true}));');
@@ -1467,7 +1471,7 @@ function buildPatchScript(removedPatches) {
   if (cssRules.length) {
     parts.push('// CSS hide rules');
     parts.push('var _s=document.createElement("style");');
-    parts.push('_s.id="gust-patcher-css";');
+    parts.push('_s.id="VORTEX-patcher-css";');
     parts.push('_s.textContent=' + JSON.stringify(cssRules.join('\n')) + ';');
     parts.push('(document.head||document.documentElement).appendChild(_s);');
   }
@@ -1487,19 +1491,19 @@ function buildPatchScript(removedPatches) {
   // Bootstrap: only contains the b64 blob (alphanumeric+/+=) and safe method names.
   // Uses <\/script> so the HTML parser never sees a raw <\/script> closing tag.
   var out = '';
-  out += '<!-- GUST Patcher patch -->\n';
+  out += '<!-- VORTEX Patcher patch -->\n';
   out += '<script>\n';
   out += '(function(){\n';
   out += '  var b=' + JSON.stringify(b64) + ';\n';
   out += '  var c=decodeURIComponent(escape(atob(b)));\n';
-  out += '  try{eval(c);}catch(e){console.error("[GUST Patcher] patch failed:",e);}\n';
+  out += '  try{eval(c);}catch(e){console.error("[VORTEX Patcher] patch failed:",e);}\n';
   out += '})();\n';
   out += '<\/script>';
   return '\n' + out + '\n';
 }
 
 function buildAndDownload() {
-  setStatus('info', 'Building patched GUST...');
+  setStatus('info', 'Building patched VORTEX...');
 
   const removed = [
     ...[...document.querySelectorAll('.patch-check[data-patch]')]
@@ -1528,20 +1532,20 @@ function buildAndDownload() {
 
   // Stamp a build comment
   var stamp = removed.length
-    ? '<!-- GUST Patcher build ' + new Date().toISOString() + ' removed: ' + removed.join(', ') + ' -->'
-    : '<!-- GUST Patcher build ' + new Date().toISOString() + ' full default build -->';
+    ? '<!-- VORTEX Patcher build ' + new Date().toISOString() + ' removed: ' + removed.join(', ') + ' -->'
+    : '<!-- VORTEX Patcher build ' + new Date().toISOString() + ' full default build -->';
   html = html.replace(/<!doctype html>/i, '<!doctype html>\n' + stamp);
 
   const blob = new Blob([html], {type:'text/html'});
   const a = document.createElement('a');
   a.href = URL.createObjectURL(blob);
-  a.download = 'GUST-Patched.html';
+  a.download = 'VORTEX-Patched.html';
   document.body.appendChild(a);
   a.click();
   document.body.removeChild(a);
   setTimeout(() => URL.revokeObjectURL(a.href), 5000);
   var kb = (html.length/1024).toFixed(0);
-  var msg = removed.length ? ('Downloaded GUST-Patched.html - ' + kb + ' KB (' + removed.length + ' patch' + (removed.length>1?'es':'') + ' applied)') : ('Downloaded GUST-Patched.html - ' + kb + ' KB');
+  var msg = removed.length ? ('Downloaded VORTEX-Patched.html - ' + kb + ' KB (' + removed.length + ' patch' + (removed.length>1?'es':'') + ' applied)') : ('Downloaded VORTEX-Patched.html - ' + kb + ' KB');
   setStatus('ok', msg);
   const fsc = document.getElementById('fileSizeCount');
   if (fsc) { fsc.textContent = kb + ' KB'; }
@@ -1549,13 +1553,13 @@ function buildAndDownload() {
   if (fsw) { fsw.style.display = 'flex'; fsw.style.alignItems = 'center'; fsw.style.gap = '6px'; }
 }
 
-// -- GUST Patcher Tutorial --------------------------------------------------
+// -- VORTEX Patcher Tutorial --------------------------------------------------
 const patcherTutSteps = [
   {
     target: null,
     icon: '<i class="fas fa-wind"></i>',
-    title: 'Welcome to GUST Patcher',
-    body: 'Build a custom version of GUST with only the features you want. This quick tour covers all the key controls.',
+    title: 'Welcome to VORTEX Patcher',
+    body: 'Build a custom version of VORTEX with only the features you want. This quick tour covers all the key controls.',
     pos: 'center'
   },
   {
@@ -1570,34 +1574,34 @@ const patcherTutSteps = [
     target: '#reloadSourceBtn',
     icon: '<i class="fas fa-rotate-right"></i>',
     title: 'Refresh Source',
-    body: 'Fetches the latest GUST source from GitHub. Also resets all checkboxes back to the default base GUST configuration.',
+    body: 'Fetches the latest VORTEX source from GitHub. Also resets all checkboxes back to the default base VORTEX configuration.',
     pos: 'below'
   },
   {
     target: '#pasteSourceBtn',
     icon: '<i class="fas fa-paste"></i>',
     title: 'Paste Source',
-    body: 'Can\'t fetch automatically? Paste the raw GUST HTML here manually. Download it from GitHub and paste the whole file in.',
+    body: 'Can\'t fetch automatically? Paste the raw VORTEX HTML here manually. Download it from GitHub and paste the whole file in.',
     pos: 'below'
   },
   {
     target: '#githubBtn',
     icon: '<i class="fab fa-github"></i>',
-    title: 'GUST on GitHub',
-    body: "View GUST's full source code, report issues, or download GUST directly from the GitHub repository. GUST is fully open source.",
+    title: 'VORTEX on GitHub',
+    body: "View VORTEX's full source code, report issues, or download VORTEX directly from the GitHub repository. VORTEX is fully open source.",
     pos: 'below'
   },
   {
     target: '#downloadBtn',
     icon: '<i class="fas fa-download"></i>',
-    title: 'Download GUST',
-    body: 'Once the source is loaded, click here to build and download your custom patched GUST with only your selected features.',
+    title: 'Download VORTEX',
+    body: 'Once the source is loaded, click here to build and download your custom patched VORTEX with only your selected features.',
     pos: 'below'
   },
   {
     icon: '<i class="fas fa-box-open"></i>',
     title: 'Quick Presets',
-    body: 'Need a fast start? Grab <strong>Base GUST</strong> straight from GitHub, or <strong>GUST Lite</strong> — a trimmed build with bloat already removed.',
+    body: 'Need a fast start? Grab <strong>Base VORTEX</strong> straight from GitHub, or <strong>VORTEX Lite</strong> — a trimmed build with bloat already removed.',
     pos: 'above',
     pad: 10,
     cloneSelector: '#homepagePresets .preset-card',
@@ -1623,8 +1627,8 @@ const patcherTutSteps = [
   {
     target: null,
     icon: '<i class="fas fa-check-circle"></i>',
-    title: 'Default selections = base GUST',
-    body: 'All currently checked patches represent the default base GUST build. Uncheck anything you want to remove before downloading.',
+    title: 'Default selections = base VORTEX',
+    body: 'All currently checked patches represent the default base VORTEX build. Uncheck anything you want to remove before downloading.',
     pos: 'center'
   }
 ];
@@ -1652,7 +1656,7 @@ function endPatcherTutorial() {
   const svg = document.getElementById('patcherTutorialSvg');
   if (svg) svg.style.opacity = '0';
   setTimeout(() => { ov.style.display = 'none'; }, 350);
-  try { localStorage.setItem('gust-patcher:tutorial:done', '1'); } catch(e){}
+  try { localStorage.setItem('VORTEX-patcher:tutorial:done', '1'); } catch(e){}
   const sr = document.getElementById('patcherSpotRect');
   if (sr) { sr.setAttribute('width','0'); sr.setAttribute('height','0'); }
   document.getElementById('patcherTutorialRing').style.display = 'none';
@@ -1942,19 +1946,19 @@ document.getElementById('patcherTutorialBack').addEventListener('click', () => {
 document.getElementById('patcherTutorialSkip').addEventListener('click', endPatcherTutorial);
 
 // ── Preset downloads ──
-function downloadBaseGUST() {
+function downloadBaseVORTEX() {
   if (sourceLoaded && sourceHTML) {
-    triggerDownload(sourceHTML, 'GUST.html');
+    triggerDownload(sourceHTML, 'VORTEX.html');
     return;
   }
   // Source not loaded yet — fetch directly
   const btn = document.getElementById('presetBaseBtn');
   if (btn) { btn.disabled = true; btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Fetching…'; }
-  fetch('https://cdn.jsdelivr.net/gh/nautilus-os/GUST@main/index.html', {cache:'no-store'})
+  fetch('https://cdn.jsdelivr.net/gh/nautilus-os/gust@main/index.html', {cache:'no-store'})
     .then(r => { if (!r.ok) throw new Error('HTTP '+r.status); return r.text(); })
-    .then(text => { triggerDownload(text, 'GUST.html'); })
-    .catch(() => { window.open('https://github.com/nautilus-os/GUST/raw/refs/heads/main/index.html','_blank'); })
-    .finally(() => { if (btn) { btn.disabled = false; btn.innerHTML = '<i class="fas fa-download"></i> Download Base GUST'; } });
+    .then(text => { triggerDownload(text, 'VORTEX.html'); })
+    .catch(() => { window.open('https://github.com/nullbit9/aerobrowser/raw/refs/heads/main//vortex/index.html','_blank'); })
+    .finally(() => { if (btn) { btn.disabled = false; btn.innerHTML = '<i class="fas fa-download"></i> Download Base VORTEX'; } });
 }
 
 const LITE_PATCHES = [
@@ -2001,14 +2005,14 @@ function downloadPreset(name) {
       if (firstScript !== -1) html = html.slice(0, firstScript) + patchScript + html.slice(firstScript);
     }
   }
-  const stamp = '<!-- GUST Patcher preset:' + name + ' build ' + new Date().toISOString() + ' -->';
+  const stamp = '<!-- VORTEX Patcher preset:' + name + ' build ' + new Date().toISOString() + ' -->';
   html = html.replace(/<!doctype html>/i, '<!doctype html>\n' + stamp);
   // Restore saved state
   document.querySelectorAll('.patch-check[data-patch]').forEach(el => {
     el.classList.toggle('checked', saved[el.dataset.patch]);
   });
   updateCounts();
-  triggerDownload(html, name === 'stealth' ? 'GUST-Lite.html' : 'gust-' + name + '.html');
+  triggerDownload(html, name === 'stealth' ? 'VORTEX-Lite.html' : 'VORTEX-' + name + '.html');
 }
 
 function triggerDownload(content, filename) {
